@@ -50,7 +50,7 @@ namespace ConsoleApplication1
 
             //Card card;
           
-            Console.WriteLine(cards[suit*13].getString() + " " + cards[rank].getRank(rank));
+            //Console.WriteLine(cards[suit*13].getString() + " " + cards[rank].getRank(rank));
 
 
 
@@ -64,9 +64,19 @@ namespace ConsoleApplication1
             int rndSuit = rnd.Next(0, 4);
             int rndRank = rnd.Next(0, 13);
 
-            Console.WriteLine(cards[rndSuit * 13].getString() + " "+ cards[rndRank].getRank(rndRank));
+            //Console.WriteLine(cards[rndSuit * 13].getString() + " "+ cards[rndRank].getRank(rndRank));
         }
 
-        // random card 
+        public void shuffleDesk()
+        {
+            Random rnd = new Random();
+            for (var i = 0; i < cards.Count ; i++)
+            {
+                var j = rnd.Next(i, cards.Count);
+                var temp = cards[i];
+                cards[i] = cards[j];
+                cards[j] = temp;
+            }
+        }
     }
 }

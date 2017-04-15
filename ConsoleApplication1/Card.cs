@@ -20,9 +20,9 @@ namespace ConsoleApplication1
             
         }
 
-        public Ranks getRank(int licznik)
+        public int getRank()
         {
-            Ranks rank = (Ranks)licznik;
+            //Ranks rank = (Ranks)licznik;
             return rank;
         }
         public string getString()
